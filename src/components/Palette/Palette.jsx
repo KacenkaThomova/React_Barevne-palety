@@ -5,7 +5,7 @@ export const Palette = ({paletteData}) => {
         <div className="palette">
           <div className="palette-scheme palette-scheme--vertical">
             <img className="scheme-image" src={paletteData.image} alt={paletteData.name} />
-            <div className="scheme-colors">{paletteData}
+            <div className="scheme-colors">{paletteData.colors}
             </div>
           </div>
           <div className="palette-info">
