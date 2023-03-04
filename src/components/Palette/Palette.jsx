@@ -1,11 +1,14 @@
-import './style.css';
-
+import './style.css'
+import React from 'react';
+import { SchemeColor } from '../SchemeColor/SchemeColor';
 export const Palette = ({paletteData}) => { 
     return (
         <div className="palette">
-          <div className="palette-scheme palette-scheme--vertical">
+          <div className= { paletteData.direction === 'vertical' ? 'palette-scheme palette-scheme--vertical' : 'palette-scheme palette-scheme--horizontal'} >
             <img className="scheme-image" src={paletteData.image} alt={paletteData.name} />
-            <div className="scheme-colors">{paletteData.colors}
+            <div className="scheme-colors">
+            <SchemeColor 
+            colorNumber={paletteData.colors}/>
             </div>
           </div>
           <div className="palette-info">
