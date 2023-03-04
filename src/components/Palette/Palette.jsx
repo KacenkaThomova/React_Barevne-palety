@@ -7,8 +7,11 @@ export const Palette = ({paletteData}) => {
           <div className= { paletteData.direction === 'vertical' ? 'palette-scheme palette-scheme--vertical' : 'palette-scheme palette-scheme--horizontal'} >
             <img className="scheme-image" src={paletteData.image} alt={paletteData.name} />
             <div className="scheme-colors">
-            <SchemeColor 
-            colorNumber={paletteData.colors}/>
+              {paletteData.colors.map((zkouska) => (
+                <SchemeColor 
+                colorNumber={zkouska}/>
+              ))}
+            
             </div>
           </div>
           <div className="palette-info">
