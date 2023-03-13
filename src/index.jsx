@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 import { palettes } from './palettes';
 import { Palette } from './components/Palette/Palette';
-import { SchemeColor } from './components/SchemeColor/SchemeColor';
 
 const App = () => {
   return (
