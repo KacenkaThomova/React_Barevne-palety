@@ -4,12 +4,12 @@ import { SchemeColor } from '../SchemeColor/SchemeColor';
 export const Palette = ({paletteData}) => { 
     return (
         <div className="palette">
-          <div className= { paletteData.direction === 'vertical' ? 'palette-scheme palette-scheme--vertical' : 'palette-scheme palette-scheme--horizontal'} >
+          <div className= {`palette-scheme palette-scheme--${paletteData.direction}`} >
             <img className="scheme-image" src={paletteData.image} alt={paletteData.name} />
             <div className="scheme-colors">
-              {paletteData.colors.map((zkouska) => (
+              {paletteData.colors.map((colorIndex) => (
                 <SchemeColor 
-                colorNumber={zkouska}/>
+                colorNumber={colorIndex}/>
               ))}
             
             </div>
